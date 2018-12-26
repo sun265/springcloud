@@ -11,6 +11,7 @@ public interface feignServer {
 	@RequestMapping("jpa/add")
 	public String add(@RequestParam("name")String name,
 			@RequestParam("money")double money);
+	@SuppressWarnings("rawtypes")
 	@RequestMapping("jpa/findall")
 	public List findAll();
 	
