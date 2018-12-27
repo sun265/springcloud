@@ -5,6 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
 
+import com.springcloud.zuul.filter.GlobleFilter;
+
 @EnableEurekaClient
 @EnableZuulProxy
 @SpringBootApplication
@@ -14,8 +16,8 @@ public class ZuulApplication {
 		SpringApplication.run(ZuulApplication.class, args);
 	}
 
-/*	public AccessFilter accessFilter() {
-		return new AccessFilter();
-	}*/
+	public GlobleFilter accessFilter() {
+		return new GlobleFilter();
+	}
 }
 
